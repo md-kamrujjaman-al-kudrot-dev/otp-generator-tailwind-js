@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OTP</title>
+  <link href="./output.css" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+<body class="bg-gray-700">
+  <section class="flex items-center justify-center h-screen">
+    <div class="flex flex-col gap-8 border border-green-300 p-10">
+      <h1 class="text-white text-4xl">Inter Your OTP</h1>
+      <div id="main-input" class="flex items-center justify-center gap-4">
+        <input class="bg-white w-6 pl-2" maxlength="1" type="text" >
+        <input class="bg-white w-6 pl-2" maxlength="1" type="text" >
+        <input class="bg-white w-6 pl-2" maxlength="1" type="text" >
+        <input class="bg-white w-6 pl-2" maxlength="1" type="text" >
+      </div>
+      <div class="flex flex-col gap-3 justify-center items-center">
+        <div id="otp" class="text-white">...</div>
+        <div id="otpResult" class="text-white">Your OTP is correct</div>
+        <div id="otp-timer" class="text-white">OTP will expiers in 15s</div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
