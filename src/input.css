@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+.valid{
+    border: 2px solid greenyellow;
+    padding: 4px;
+    background: #489c5336;
+}
+.invalid{
+    border: 2px solid red;
+    padding: 4px;
+    background: #ce73735d;
+}
