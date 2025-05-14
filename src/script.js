@@ -2,26 +2,25 @@ let generateOTP;
 let intervalId;
 const timerBox = document.getElementById("otp-timer");
 
+
 function otpTimer() {
 
     const interval = 1000;
-    const timeout = 15000;
+    const timeout = 14000;
     let comeDown = timeout / interval;
 
 
     intervalId = setInterval(() => {
         timerBox.innerText = `Your OTP will expire in ${comeDown} second`;
         comeDown = comeDown - 1;
-        // 15/1= 15-1 = 14
-
-
+        // 14/1= 14-1 = 13
     }, interval);
 
     // interval is stoped here
     setTimeout(() => {
         timerBox.innerText = `Your OTP Expired`;
         clearInterval(intervalId)
-    }, timeout);
+    }, 16000);
 }
 
 
@@ -94,12 +93,13 @@ function otpCHeker() {
         validOTP.innerHTML = "OTP is valid"
         validOTP.classList.add("valid")
         validOTP.classList.remove("invalid")
-
+        
+        otpGenerator()
+        clearInterval(intervalId)
         // when user provide corret opt , comeDown will stoped
         setTimeout(() => {
             timerBox.innerText = `Your OTP Expired`;
             clearInterval(intervalId)
-            
         }, 1000);
 
     } else {
